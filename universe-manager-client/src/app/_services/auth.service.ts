@@ -14,7 +14,12 @@ export class AuthService {
   constructor(public http: HttpClient) { }
 
   logInUser(user:User): Observable<ServerResultMessage> {
-    return this.http.get<ServerResultMessage>(env.apiUrl + 'auth/login');
+    return this.http.get<ServerResultMessage>(env.apiUrl + 'auth/login').map(result => {
+      if(result.success) {
+        localStorage.setItem('token', result.message);
+      }
+      return result;
+    });
   }
 
 }
