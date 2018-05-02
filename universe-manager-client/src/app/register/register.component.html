@@ -1,3 +1,28 @@
-<p>
-  register works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col">&nbsp;</div>
+    <div class="col-auto">
+      <form #registerForm="ngForm">
+        <div class="form-group">
+          <h2>Register</h2>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" class="form-control" [(ngModel)]="user.email" >
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" [(ngModel)]="user.password" >
+        </div>
+        <div class="form-group">
+          <label for="password_confirm">Confirm Password</label>
+          <input id="password_confirm" name="password_confirm" class="form-control" [(ngModel)]="password_confirm" >
+        </div>
+        <div class="form-group right">
+          <button type="submit" class="btn float-right">register</button>
+        </div>
+      </form>
+    </div>
+    <div class="col">&nbsp;</div>
+  </div>
+</div>

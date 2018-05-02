@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
 
 /* components */
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes, {
       enableTracing: environment.production
     })
