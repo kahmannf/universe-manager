@@ -18,6 +18,10 @@
           <label for="password_confirm">Confirm Password</label>
           <input id="password_confirm" name="password_confirm" class="form-control" [(ngModel)]="password_confirm" >
         </div>
+        <div class="form-group">
+          <label for="alias">Alias</label>
+          <input type="text" id="alias" name="alias" class="form-control" [(ngModel)]="user.alias" >
+        </div>
         <div class="form-group right">
           <button type="submit" class="btn float-right">register</button>
         </div>
